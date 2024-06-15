@@ -1,17 +1,6 @@
-@extends('layout.mainDashboard')
-
-
-<head>
-    @include('dashincludes.headTable')
-</head>
-
-@section('sideBar')
-@include('dashincludes.sidebar2')
-@endsection
-
+@extends('admin.layout.main1')
 @section('content')
-@include('dashincludes.tablesContent')
-@include('dashincludes.javaScript3')
+    @include('admin.includes.tables')
 @endsection
 
 

@@ -1,19 +1,11 @@
-
-@extends('layout.mainDashboard')
-@section('head')
-@include('dashincludes.head')
-@endsection
-
+@extends('admin.layout.main1')
 
 @section('content')
-@include('dashincludes.sidebar2')
+        @include('admin.includes.button')
+@endsection
 
-@include('dashincludes.topBar2')
-          <!-- End of Topbar -->
-@include('dashincludes.buttonContent')
-@endsection
-@section('java')
-@include('dashincludes.javaScriptPages')
-@endsection
+
+
+
 
 

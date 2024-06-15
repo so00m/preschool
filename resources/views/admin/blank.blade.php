@@ -1,27 +1,13 @@
-
-@extends('layout.mainDashboard')
-
-
-@section('head')
-@include('dashincludes.headPages')
-@endsection
-
-
-@section('sideBar')
-@include('dashincludes.sidebar2')
-
-@include('dashincludes.topBar2')
-@endsection
-
-
+@extends('admin.layout.main1')
 @section('content')
-@include('dashincludes.blankContent')
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+        <!-- Page Heading -->
+        <h1 class="h3 mb-4 text-gray-800">Blank Page</h1>
+    </div>
+    <!-- /.container-fluid --> 
 @endsection
 
-
-@section('java')
-@include('dashincludes.javaScriptPages')
-@endsection
 
 
 

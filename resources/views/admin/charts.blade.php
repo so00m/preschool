@@ -1,22 +1,7 @@
-@extends('layout.mainDashboard')
+@extends('admin.layout.main1')
 
-@section('head')
-@include('dashincludes.head')
+@section('content')
+              @include('admin.includes.charts')
 @endsection
-
-
-@section('sideBar')
-@include('dashincludes.sidebar2')
-@include('dashincludes.topBar2')
-@endsection
-
-       @section('content')
-       @include('dashincludes.chartsContent')
-       @endsection
-
-@section('java')
-@include('dashincludes.javaScript2')
-@endsection
-
 
 
