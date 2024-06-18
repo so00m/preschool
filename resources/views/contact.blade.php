@@ -6,9 +6,6 @@
         @include('includes.header')
         <!-- Page Header End -->
          
-       
-
-
         <!-- Contact Start -->
         @include('includes.contact')
         <!-- Contact End -->
