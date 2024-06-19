@@ -8,68 +8,82 @@ class DashboardController extends Controller
 {
     public function dashBoard()
     {
-        $title = 'Dashboard Main';
-        return view('admin.dashBoard', compact('title'));
+        return view('admin.dashBoard');
     }
 
     public function login()
     {
-        $title = 'Login Page';
-        return view('admin.login', compact('title'));
+        return view('admin.login');
     }
 
 
     public function register()
     {
-        $title = 'Register Page';
-        return view('admin.register', compact('title'));
+        return view('admin.register');
     }
 
 
     public function tables()
     {
-        $title = 'Tables Page';
-        return view('admin.tables', compact('title'));
+        return view('admin.tables');
     }
 
 
     public function forgotPassword()
     {
-        $title = 'Forgot-Password Page';
-        return view('admin.forgotPassword', compact('title'));
+        return view('admin.forgotPassword');
     }
 
     public function error()
     {
-        $title = 'Error Page';
-        return view('admin.error', compact('title'));
+        return view('admin.error');
     }
 
     public function blank()
     {
-        $title = 'Blank Page';
-        return view('admin.blank', compact('title'));
+        return view('admin.blank');
     }
 
 
     public function buttons()
     {
-        $title = 'Button Page';
-        return view('admin.buttons', compact('title'));
+        return view('admin.buttons');
     }
 
 
     public function cards()
     {
-        $title = 'Cards Page';
-        return view('admin.cards', compact('title'));
+        return view('admin.cards');
     }
 
 
     public function charts()
     {
-        $title = 'Charts Page';
-        return view('admin.charts', compact('title'));
+        return view('admin.charts');
     }
+
+    public function color()
+    {
+        return view('admin.utilities-color');
+    }
+
+    public function animation()
+    {
+        return view('admin.utilities-animation');
+    }
+
+    public function border()
+    {
+        return view('admin.utilities-border');
+    }
+
+    public function other()
+    {
+        return view('admin.utilities-other');
+    }
+
+
+
+
 
 }

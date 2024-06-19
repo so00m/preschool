@@ -1,4 +1,5 @@
 @extends('admin.layout.main1')
+@section('title','Blank Page')
 @section('content')
     <!-- Begin Page Content -->
     <div class="container-fluid">
