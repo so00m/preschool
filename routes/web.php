@@ -7,15 +7,15 @@ use App\Http\Controllers\PreschoolController;
 use App\Http\Controllers\DashboardController;
 
 
-Route::get('welcome', function () {
+Route::get('/', function () {
     return view('welcome');
 });
 
 //---------------front pages routes----------------------------------------------------------
 
 
-Route::get('/', [PreschoolController::class, 'index'])->name('index');  //correct
-Route::get('about', [PreschoolController::class, 'about'])->name('about');//correct
+Route::get('index', [PreschoolController::class, 'index'])->name('index');  
+Route::get('about', [PreschoolController::class, 'about'])->name('about');
 Route::get('team', [PreschoolController::class, 'team'])->name('team');
 Route::get('error', [PreschoolController::class, 'error'])->name('error');
 Route::get('appointment', [PreschoolController::class, 'appointment'])->name('appointment');
@@ -41,8 +41,11 @@ Route::prefix('admin')->group(function () {
     Route::get('buttons',[DashboardController::class, 'buttons'])->name('buttons');
     Route::get('cards',[DashboardController::class, 'cards'])->name('cards');
     Route::get('charts',[DashboardController::class, 'charts'])->name('charts');
-    
-    });
+    Route::get('animation',[DashboardController::class, 'animation'])->name('animation');
+    Route::get('border',[DashboardController::class, 'border'])->name('border');
+    Route::get('color',[DashboardController::class, 'color'])->name('color');
+    Route::get('other',[DashboardController::class, 'other'])->name('other');
+    })->middleware('verified');
 
 Auth::routes(['verify'=>true]);
 

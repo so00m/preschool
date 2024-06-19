@@ -14,8 +14,8 @@
 <!-- Custom styles for this template-->
 <link href="{{asset('dashAssets/css/sb-admin-2.min.css')}}" rel="stylesheet">
 
-<!-- +table  head-->
 
+<!-- +table  head-->
 <!-- Custom styles for this page -->
 <link href="{{asset('dashAssets/vendor/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet">
 

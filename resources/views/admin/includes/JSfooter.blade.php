@@ -26,5 +26,3 @@
     <script src="{{asset('dashAssets/js/demo/datatables-demo.js')}}"></script>
 
 
-
-
