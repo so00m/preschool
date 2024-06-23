@@ -13,13 +13,13 @@ class DashboardController extends Controller
 
     public function login()
     {
-        return view('admin.login');
+        return view('auth.login');
     }
 
 
     public function register()
     {
-        return view('admin.register');
+        return view('auth.register');
     }
 
 

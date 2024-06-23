@@ -20,3 +20,9 @@
 <link href="{{asset('dashAssets/vendor/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet">
 
 
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<link rel="preconnect" href="https://fonts.bunny.net">
+        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+
+

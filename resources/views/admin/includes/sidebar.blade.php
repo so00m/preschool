@@ -107,12 +107,28 @@
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
 
-    <!-- Sidebar Toggler (Sidebar) -->
+
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" 
+            aria-expanded="{{ request()->is('teachers') || request()->is('addTeacher') ? 'true' : 'true' }}">
+            <i class="fas fa-fw fa-wrench"></i>
+            <span>Teachers</span>
+        </a>
+        <div id="collapseteachers" class="collapse {{ request()->is('teachers') || request()->is('addTeacher') ? 'show' : 'show' }}" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item {{ request()->is('teachers') ? 'active' : '' }}" href="{{ route('teachers') }}">Teachers</a>
+                <a class="collapse-item {{ request()->is('addTeacher') ? 'active' : '' }}" href="{{ route('addTeacher') }}">Add Teacher</a>
+            </div>
+        </div>
+    </li>
+
+ <!-- Sidebar Toggler (Sidebar) -->
     <div class="text-center d-none d-md-inline">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
     </div>
 
-       
 
 
 </ul>
+
+   

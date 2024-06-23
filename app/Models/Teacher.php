@@ -11,16 +11,16 @@ class Teacher extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
-        'first_name', 'last_name', 'phone', 'email', 'subject'
+        'first_name', 'last_name', 'phone', 'email', 'subject','image','published',
     ];
 
     public function children()
-    {
-        return $this->belongsToMany(Child::class, 'children_teachers');
-    }
+        {
+            return $this->belongsToMany(Child::class, 'children_teachers');
+        }
 
-    public function classes()
-    {
-        return $this->belongsToMany(Classes::class, 'classes_teachers', 'teacher_id', 'class_id');
-    }
+        public function classes()
+        {
+            return $this->belongsToMany(Classes::class, 'classes_teachers', 'teacher_id', 'class_id');
+        }
 }
