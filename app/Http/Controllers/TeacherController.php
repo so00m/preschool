@@ -39,15 +39,14 @@ class TeacherController extends Controller
             'email'=>'required|email:rfc',
             'subject' => 'required',
             'image' => 'required|mimes:jpg,bmp,png',
-            'published' => 'boolean'
              ] , $messages);
        
-        $fileName=$this->UploadFile($request->image , 'assets/img');
+        $filename=$this->upload($request->image , 'assets/images');
 
-        $data['image']=$fileName;
+        $data['image']=$filename;
 
         $data['published']=isset($request->published);
-dd($data);
+        var_dump($data['published']);
         Teacher::create($data);
         return redirect('teachers')->with('success', 'Teacher added successfully!');
     }

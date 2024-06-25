@@ -6,23 +6,7 @@ use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
-    public function dashBoard()
-    {
-        return view('admin.dashBoard');
-    }
-
-    public function login()
-    {
-        return view('auth.login');
-    }
-
-
-    public function register()
-    {
-        return view('auth.register');
-    }
-
-
+   
     public function tables()
     {
         return view('admin.tables');

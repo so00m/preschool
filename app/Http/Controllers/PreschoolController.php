@@ -8,43 +8,43 @@ class PreschoolController extends Controller
 {
 
     public function index(){
-            return view('index');
+            return view('frontPages.index');
         }
 
     public function team(){
-            return view('team');
+            return view('frontPages.team');
         }
 
     public function error(){
-            return view('error');
+            return view('frontPages.error');
         }
 
     public function about(){
-            return view('about');
+            return view('frontPages.about');
         }
 
     public function appointment(){
-            return view('appointment');
+            return view('frontPages.appointment');
         }
 
     public function callToAction(){
-            return view('callToAction');
+            return view('frontPages.callToAction');
         }
 
     public function classes(){
-            return view('classes');
+            return view('frontPages.classes');
         }
 
     public function contact(){
-            return view('contact');
+            return view('frontPages.contact');
         }
 
     public function facility(){
-            return view('facilities');
+            return view('frontPages.facilities');
         }
 
     public function testimonial(){
-            return view('testimonial');
+            return view('frontPages.testimonial');
         }
 
 }

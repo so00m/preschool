@@ -1,8 +1,6 @@
 <meta charset="utf-8"> 
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="">
-<meta name="author" content="">
 
 <title>@yield('title')</title>
 
@@ -12,17 +10,19 @@
     rel="stylesheet">  
 
 <!-- Custom styles for this template-->
+<link href="{{asset('dashAssets/css/sb-admin-2.css')}}" rel="stylesheet">
 <link href="{{asset('dashAssets/css/sb-admin-2.min.css')}}" rel="stylesheet">
 
-
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 <!-- +table  head-->
 <!-- Custom styles for this page -->
 <link href="{{asset('dashAssets/vendor/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet">
 
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link href="https://fonts.bunny.net" rel="preconnect">
+<link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" >
 
-<link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-
-
+<!-- Bootstrap core JavaScript-->
+    <script src="{{asset('dashAssets/vendor/jquery/jquery.min.js')}}"></script>
+    <script src="{{asset('dashAssets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>

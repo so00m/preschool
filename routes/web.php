@@ -11,14 +11,9 @@ use App\Http\Controllers\ClassesController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ChildController;
 
+// Route::get('/', function () { return view('welcome'); });
 
-Route::get('/', function () {
-   return view('welcome');
-});
-
-Route::get('/logout', function () { Auth::logout(); return redirect('login'); })->name('logout');
 //---------------front pages routes----------------------------------------------------------
-
 
 Route::get('index', [PreschoolController::class, 'index'])->name('index');
 Route::get('about', [PreschoolController::class, 'about'])->name('about');
@@ -31,13 +26,10 @@ Route::get('contact', [PreschoolController::class, 'contact'])->name('contact');
 Route::get('facility', [PreschoolController::class, 'facility'])->name('facility');
 Route::get('testimonial', [PreschoolController::class, 'testimonial'])->name('testimonial');
 
-
-
-
 //---------------dashboard routes-----------------------------------------------------------
 
-Route::prefix('admin')->group(function () {
-    
+Route::prefix('admin')->middleware('verified')->group(function () {
+
     //Route::get('dashBoard',[DashboardController::class, 'dashBoard'])->name('dashBoard');
     // Route::get('login',[DashboardController::class, 'login'])->name('login');
     // Route::get('register',[DashboardController::class, 'register'])->name('register');
@@ -53,14 +45,12 @@ Route::prefix('admin')->group(function () {
     Route::get('color',[DashboardController::class, 'color'])->name('color');
     Route::get('other',[DashboardController::class, 'other'])->name('other');
 
-    })->middleware('verified');
+    });
 
-  Route::get('/dashBoard', [App\Http\Controllers\HomeController::class, 'index'])->middleware('verified')->name('dashBoard');  
-    
 Auth::routes(['verify'=>true]);
 // Home route after successful login and verification
-
-
+Route::get('/dashBoard', [App\Http\Controllers\HomeController::class, 'index'])->middleware('verified')->name('dashBoard');  
+Route::get('/logout', function () { Auth::logout(); return redirect('login'); })->name('logout');
 //---------------teacher routes-----------------------------------------------------------
 
 Route::get('teachers',[TeacherController::class, 'index'])->name('teachers');
@@ -71,7 +61,6 @@ Route::put('updateTeacher/{id}', [TeacherController::class, 'update'])->name('up
 Route::get('showTeacher/{id}', [TeacherController::class, 'show'])->name('showTeacher');
 Route::delete('deleteTeacher', [TeacherController::class, 'destroy'])->name('deleteTeacher');
 Route::get('restoreTeacher/{id}', [TeacherController::class,'restore'])->name('restoreTeacher');
-
 
 //---------------classes routes-----------------------------------------------------------
 
@@ -84,9 +73,6 @@ Route::get('showClass/{id}', [ClassesController::class, 'show'])->name('showClas
 Route::delete('deleteClass', [ClassesController::class, 'destroy'])->name('deleteClass');
 Route::get('restoreClass/{id}', [ClassesController::class,'restore'])->name('restoreClass');
 
-
-
-
 //---------------children routes-----------------------------------------------------------
 
 Route::get('children',[ChildController::class, 'index'])->name('children');
@@ -97,7 +83,5 @@ Route::put('updateChild/{id}', [ChildController::class, 'update'])->name('update
 Route::get('showChild/{id}', [ChildController::class, 'show'])->name('showChild');
 Route::delete('deleteChild', [ChildController::class, 'destroy'])->name('deleteChild');
 Route::get('restoreChild/{id}', [ChildController::class,'restore'])->name('restoreChild');
-
-
 
 //--------------------------------------------------------------------------
