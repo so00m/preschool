@@ -4,9 +4,10 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\Classes;
+use App\Models\Teacher;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Classes>
  */
 class ClassesFactory extends Factory
 {
@@ -18,9 +19,14 @@ class ClassesFactory extends Factory
     public function definition(): array
     {
         return [
-            //
-            'name' =>  $this->faker->randomElement(['Orange', 'Blue Sky', 'Baby Blue', 'Snow White', 'Sun Flower']),
-            'no_of_children' => $this->faker->NumberBetween(10,15),
+            'name' =>fake()->randomElement(['Orange', 'Blue Sky', 'Baby Blue', 'Snow White', 'Sun Flower']),
+            'description'=>fake()->words(),
+            'teacher_id'=> Teacher::factory(),
+            'price'=>fake()->numberBetween(70,90),
+            'start_time'=>fake()->time('H'),
+            'end_time'=>fake()->time('H'),
+            'start_date'=>fake()->date('d-m'),
+            'end_date'=>fake()->date('d-m'),
         ];
     }
 }

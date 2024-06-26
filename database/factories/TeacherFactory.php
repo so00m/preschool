@@ -19,13 +19,13 @@ class TeacherFactory extends Factory
     {
         return [
             //
-            'first_name' => $this->faker->firstname,
-            'last_name'=> $this->faker->lastname,
-            'phone' => $this->faker->phoneNumber(),
-            'email' => $this->faker->unique()->safeEmail(),
-            'subject' => $this->faker->randomElement(['English Teacher', 'Math Teacher', 'Science Teacher', 'Computer Teacher']),
-        
-
+            'first_name' =>fake()->firstname,
+            'last_name'=>fake()->lastname,
+            'phone' =>fake()->phoneNumber(),
+            'email' =>fake()->unique()->safeEmail(),
+            'subject' =>fake()->word(),
+            'image' =>fake()->randomElement([1719085620,1719085620,1719085620]),
+            'published'=>fake()->numberBetween(0,1),
         ];
     }
 }
