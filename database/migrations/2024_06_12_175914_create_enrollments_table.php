@@ -16,7 +16,7 @@ return new class extends Migration
             $table->date('registerDate');
             $table->string('status');
             $table->foreignId('class_id')->constrained('classes');
-            $table->foreignId('Child_id')->constrained('children');
+            $table->foreignId('child_id')->constrained('children');
             $table->timestamps();
         });
     }
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('appoientments');
+        Schema::dropIfExists('enrollments');
     }
 };

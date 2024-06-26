@@ -10,6 +10,8 @@ use App\Models\Child;
 use App\Models\Teacher; 
 use App\Models\Classes;
 use App\Models\Enrollment;
+
+
 use Illuminate\Database\Seeder;
 
 
@@ -28,11 +30,12 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@example.com',
         ]);
         */
-        Teacher::factory(10)->create();
-        Parents::factory(10)->create();
-        Child::factory(10)->create();
-        Classes::factory(10)->create();
-        Enrollment::factory(10)->create();
+        // Teacher::factory(6)->create();
+        // Parents::factory(30)->create();
+        // Child::factory(30)->create();
+        // Classes::factory(6)->create();
+        Enrollment::factory(30)->create();
+        
         
 
         // // Attach children to teachers (many-to-many relationship)

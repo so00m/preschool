@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Models\Classes;
 use App\Models\Parents;
+use App\Models\Enrollment;
 
 class Child extends Model
 {

@@ -18,8 +18,14 @@ class ClassesFactory extends Factory
      */
     public function definition(): array
     {
+        // switch (){
+
+        //teacher id & class name
+
+        // };
+
         return [
-            'name' =>fake()->randomElement(['Orange', 'Blue Sky', 'Baby Blue', 'Snow White', 'Sun Flower']),
+            'name' =>fake()->randomElement(['Art & Drawing', 'Color Management', 'Athletic & Dance', 'Language & Speaking', 'Religion & History','General Knowledge']),
             'description'=>fake()->sentence(),
             'NumOfChildren'=>fake()->randomElement([30]),
             'age_range'=>fake()->randomElement([5]),

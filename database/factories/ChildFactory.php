@@ -26,7 +26,7 @@ class ChildFactory extends Factory
             'last_name'=>fake()->lastname(),
             'birth_date'=>fake()->date(),
             'grade'=>fake()->NumberBetween(1,2),
-            'parent_id' => Parents::factory(),
+            'parent_id' =>fake()->NumberBetween(1,20),
         ];
     }
 }
