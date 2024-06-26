@@ -30,12 +30,12 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@example.com',
         ]);
         */
-        // Teacher::factory(6)->create();
-        // Parents::factory(30)->create();
-        // Child::factory(30)->create();
-        // Classes::factory(6)->create();
-        Enrollment::factory(30)->create();
-        
+        Teacher::factory(6)->create();
+        Parents::factory(30)->create();
+        Child::factory(30)->create();
+        Classes::factory(6)->create();
+        //Enrollment::factory(30)->create();
+        User::factory(20)->create();
         
 
         // // Attach children to teachers (many-to-many relationship)
