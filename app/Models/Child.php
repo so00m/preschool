@@ -23,7 +23,7 @@ class Child extends Model
 
     public function enrollments()
     {
-        return $this->hasMany(Enrollment::class);
+        return $this->hasMany(Enrollment::class); 
     }
 
 }
