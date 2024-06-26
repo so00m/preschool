@@ -8,19 +8,15 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Teacher extends Model
 {
+    protected $table = 'teachers';
+
     use HasFactory, SoftDeletes;
 
-    protected $fillable = [
-        'first_name', 'last_name', 'phone', 'email', 'subject','image','published',
-    ];
+    protected $fillable = ['first_name', 'last_name', 'phone', 'email', 'subject','image','published'];
 
-    public function children()
-        {
-            return $this->belongsToMany(Child::class, 'children_teachers');
-        }
+    public function classes()
+    {
+        return $this->hasMany(Classes::class);
+    }
 
-        public function classes()
-        {
-            return $this->belongsToMany(Classes::class, 'classes_teachers', 'teacher_id', 'class_id');
-        }
 }

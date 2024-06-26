@@ -8,13 +8,14 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Parents extends Model
 {
+    protected $table = 'parents';
+
     use HasFactory, SoftDeletes;
-    protected $fillable = ['first_name', 'last_name', 'phone', 'address', 'email'];
+    protected $fillable = ['first_name', 'last_name', 'phone', 'address', 'email','job'];
 
     public function children()
     {
         return $this->hasMany(Child::class);
-    
     }
 
 }

@@ -17,8 +17,8 @@
                             <tr>
                                 <th>first name</th>
                                 <th>last name</th>
-                                <th>phone</th>
-                                <th>email</th>
+                                <th>date_of_birth</th>
+                                <th>grade</th>
                                 <th>subject</th>
                                 <th>published</th>
                                 <td>image</td>
@@ -31,8 +31,8 @@
                             <tr>
                                 <td>{{$teacher->first_name}}</td>
                                 <td>{{$teacher->last_name}}</td>
-                                <td>{{$teacher->phone}}</td>
-                                <td>{{$teacher->email}}</td>
+                                <td>{{$teacher->date_of_birth}}</td>
+                                <td>{{$teacher->grade}}</td>
                                 <td>{{$teacher->subject}}</td>
                                 <td>{{$teacher->published}}</td>
                                 <td>{{$teacher->image}}</td>

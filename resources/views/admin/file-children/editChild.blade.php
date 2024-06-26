@@ -55,7 +55,7 @@
         </div>
 
         <div class="form-group">
-            <p><img src="{{ asset('assets/images/'. $teacher->image ) }}"></p>
+            <img src="{{ asset('assets/images/'. $teacher->image ) }}">
 
             <label for="image">Image</label>
             <p style="color:rgb(117, 2, 2)">
@@ -65,8 +65,8 @@
         </div>
 
         <div class="form-group">
-        <input type="checkbox" {{$teacher->published ? 'checked' : ''}}  name="published"  >
-        <label for="published" >Click here to publish on the site </label>
+            <input type="checkbox" {{$teacher->published ? 'checked' : ''}}  name="published"  >
+            <label for="published" >Click here to publish on the site </label>
         </div>
 
         <input type="submit" value="update">

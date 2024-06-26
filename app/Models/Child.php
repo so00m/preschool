@@ -10,19 +10,19 @@ use App\Models\Parents;
 
 class Child extends Model
 {
-    use HasFactory, SoftDeletes;
-    protected $fillable = ['first_name', 'last_name', 'date_of_birth', 'grade' ,'parent_id', 'class_id'];
+    protected $table = 'children';
 
-    public function parent()
+    use HasFactory, SoftDeletes;
+    protected $fillable = ['first_name', 'last_name','birth_date', 'grade' ,'parent_id'];
+
+    public function classes()
     {
-        return $this->belongsTo(Parents::class);
+        return $this->belongsToMany(classes::class);
     }
-    public function class()
+
+    public function enrollments()
     {
-        return $this->belongsTo(Classes::class);
+        return $this->hasMany(Enrollment::class);
     }
-    public function teachers()
-    {
-        return $this->belongsToMany(Teacher::class, 'children_teachers');
-    }
+
 }

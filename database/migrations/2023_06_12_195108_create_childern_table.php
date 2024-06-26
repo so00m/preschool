@@ -15,10 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('first_name');
             $table->string('last_name');
-            $table->date('date_of_birth');
+            $table->date('birth_date');
             $table->string('grade');
             $table->foreignId('parent_id')->constrained('parents')->onDelete('restrict');
-            $table->foreignId('class_id')->constrained('classes')->onDelete('restrict');
             $table->softDeletes();
             $table->timestamps();
         });

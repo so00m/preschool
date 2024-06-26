@@ -8,19 +8,29 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Classes extends Model
 {
-    use HasFactory, SoftDeletes;
+    protected $table = 'classes';
 
+    use HasFactory, SoftDeletes;
     protected $fillable = [
-        'name', 'no_of_children'
+        'name', 'NumOfChildren',
+        'age_range','description',
+        'teacher_id','price',
+        'start_time','end_time',
+        'start_date','end_date',
     ];
+    
+    public function teacher()
+    {
+        return $this->belongsTo(Teacher::class);
+    }
 
     public function children()
     {
-        return $this->hasMany(Child::class);
+        return $this->belongsToMany(Child::class);
+    }
+    public function enrollments()
+    {
+        return $this->hasMany(Enrollment::class, 'class_id'); 
     }
 
-    public function teachers()
-    {
-        return $this->belongsToMany(Teacher::class, 'classes_teachers', 'class_id', 'teacher_id');
-    }
 }
