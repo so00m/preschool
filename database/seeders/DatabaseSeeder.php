@@ -2,13 +2,16 @@
 
 namespace Database\Seeders;
 
+// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\Parents;
 use App\Models\User;
 use App\Models\Child;
 use App\Models\Teacher; 
 use App\Models\Classes;
-use App\Models\Parents;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Enrollment;
 use Illuminate\Database\Seeder;
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -25,25 +28,23 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@example.com',
         ]);
         */
-        $children = Child::factory(20)->create();
-        $teachers = Teacher::factory(20)->create();
-        $parents = Parents::factory(20)->create();
-        $classes = Classes::factory(20)->create();
-
-        // Attach children to teachers (many-to-many relationship)
-        $teachers->each(function ($teacher) use ($children) {
-            $teacher->children()->attach(
-                $children->random(rand(1, 10))->pluck('id')->toArray()
-            );
-        });
-
-        // Attach teachers to classes (many-to-many relationship)
-        $teachers->each(function ($teacher) use ($classes) {
-            $teacher->classes()->attach(
-                $classes->random(rand(1, 10))->pluck('id')->toArray()
-            );
-        });
-
+        Teacher::factory(10)->create();
+        Parents::factory(10)->create();
+        Child::factory(10)->create();
+        Classes::factory(10)->create();
+        Enrollment::factory(10)->create();
         
+
+        // // Attach children to teachers (many-to-many relationship)
+        // $teachers->each(function ($teacher) use ($children) {
+        //     $teacher->children()->attach(
+        //         $children->random(rand(1, 10))->pluck('id')->toArray()
+        //     );
+        // });
+
+        // // Attach teachers to classes (many-to-many relationship)
+        // $teachers->each(function ($teacher) use ($classes) {
+        //     $teacher->classes()->attach($classes->random(rand(1, 10))->pluck('id')->toArray());
+        // }); 
     }
 }

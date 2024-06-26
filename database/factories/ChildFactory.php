@@ -4,7 +4,8 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\Child;
-use App\Models\Parent;
+use App\Models\Parents;
+use Database\Factories\ParentsFactory;
 
 
 /**
@@ -25,7 +26,7 @@ class ChildFactory extends Factory
             'last_name'=>fake()->lastname(),
             'birth_date'=>fake()->date(),
             'grade'=>fake()->NumberBetween(1,2),
-            'parent_id' => Parent::factory(),
+            'parent_id' => Parents::factory(),
         ];
     }
 }

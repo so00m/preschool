@@ -13,8 +13,8 @@ class Classes extends Model
     use HasFactory, SoftDeletes;
     protected $fillable = [
         'name',
-        'NumOfChildren'=>30,
-        'age_range'=>'3:5 years',
+        'NumOfChildren',
+        'age_range',
         'description',
         'teacher_id','price',
         'start_time','end_time',

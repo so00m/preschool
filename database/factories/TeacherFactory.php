@@ -19,8 +19,8 @@ class TeacherFactory extends Factory
     {
         return [
             //
-            'first_name' =>fake()->firstname,
-            'last_name'=>fake()->lastname,
+            'first_name' =>fake()->firstname(),
+            'last_name'=>fake()->lastname(),
             'phone' =>fake()->phoneNumber(),
             'email' =>fake()->unique()->safeEmail(),
             'subject' =>fake()->word(),

@@ -20,13 +20,15 @@ class ClassesFactory extends Factory
     {
         return [
             'name' =>fake()->randomElement(['Orange', 'Blue Sky', 'Baby Blue', 'Snow White', 'Sun Flower']),
-            'description'=>fake()->words(),
+            'description'=>fake()->sentence(),
+            'NumOfChildren'=>fake()->randomElement([30]),
+            'age_range'=>fake()->randomElement([5]),
             'teacher_id'=> Teacher::factory(),
             'price'=>fake()->numberBetween(70,90),
             'start_time'=>fake()->time('H'),
             'end_time'=>fake()->time('H'),
-            'start_date'=>fake()->date('d-m'),
-            'end_date'=>fake()->date('d-m'),
+            'start_date'=>fake()->date(),
+            'end_date'=>fake()->date(),
         ];
     }
 }
