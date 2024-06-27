@@ -3,11 +3,11 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use app\Models\Enrollment;
+
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Enrollment>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\RegisterForClass>
  */
-class EnrollmentFactory extends Factory
+class RegisterForClassFactory extends Factory
 {
     /**
      * Define the model's default state.

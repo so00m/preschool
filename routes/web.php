@@ -8,6 +8,7 @@ use App\Http\Controllers\PreschoolController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\ClassesController;
+use App\Http\Controllers\MyController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ChildController;
 
@@ -21,7 +22,7 @@ Route::get('team', [PreschoolController::class, 'team'])->name('team');
 Route::get('error', [PreschoolController::class, 'error'])->name('error');
 Route::get('appointment', [PreschoolController::class, 'appointment'])->name('appointment');
 Route::get('callToAction', [PreschoolController::class, 'callToAction'])->name('callToAction');
-Route::get('classes', [PreschoolController::class, 'classes'])->name('classes');
+Route::get('classespage', [PreschoolController::class, 'classes'])->name('classespage');
 Route::get('contact', [PreschoolController::class, 'contact'])->name('contact');
 Route::get('facility', [PreschoolController::class, 'facility'])->name('facility');
 Route::get('testimonial', [PreschoolController::class, 'testimonial'])->name('testimonial');
@@ -64,7 +65,7 @@ Route::get('restoreTeacher/{id}', [TeacherController::class,'restore'])->name('r
 
 //---------------classes routes-----------------------------------------------------------
 
-Route::get('classes',[ClassesController::class, 'index'])->name('Classes');
+Route::get('classes',[ClassesController::class, 'index'])->name('classes');
 Route::get('addClass',[ClassesController::class, 'create'])->name('addClass');
 Route::post('insertClass', [ClassesController::class,'store'])->name('insertClass');
 Route::get('editClass/{id}', [ClassesController::class, 'edit'])->name('editClass');
@@ -84,4 +85,10 @@ Route::get('showChild/{id}', [ChildController::class, 'show'])->name('showChild'
 Route::delete('deleteChild', [ChildController::class, 'destroy'])->name('deleteChild');
 Route::get('restoreChild/{id}', [ChildController::class,'restore'])->name('restoreChild');
 
-//--------------------------------------------------------------------------
+
+
+
+//---------------------------session routes-----------------------------------------------
+Route::get('mysession', [MyController::class, 'myVal']);
+Route::get('restoresession', [MyController::class, 'restoreVal']);
+Route::get('deletesession', [MyController::class, 'deleteVal']);

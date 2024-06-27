@@ -9,7 +9,7 @@
         <div class="navbar-nav mx-auto">
             <a href="{{ route('index') }}" class="nav-item nav-link {{ Route::is('index') ? 'active' : '' }}">Home</a>
             <a href="{{ route('about') }}" class="nav-item nav-link {{ Route::is('about') ? 'active' : '' }}">About Us</a>
-            <a href="{{ route('classes') }}" class="nav-item nav-link {{ Route::is('classes') ? 'active' : '' }}">Classes</a>
+            <a href="{{ route('classespage') }}" class="nav-item nav-link {{ Route::is('classes') ? 'active' : '' }}">Classes</a>
             <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle 
                 {{ Route::is('facility') | Route::is('team') | Route::is('calltoaction') 

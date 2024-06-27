@@ -33,9 +33,10 @@ class Classes extends Model
     {
         return $this->belongsToMany(Child::class);
     }
-    public function enrollments()
-    {
-        return $this->hasMany(Enrollment::class, 'class_id'); 
-    }
+    
+    // public function registerations()
+    // {
+    //     return $this->hasMany(RegisterForClass::class,'class_id'); 
+    // }
 
 }

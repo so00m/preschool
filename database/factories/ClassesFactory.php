@@ -3,8 +3,6 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use App\Models\Classes;
-use App\Models\Teacher;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Classes>
@@ -29,7 +27,7 @@ class ClassesFactory extends Factory
             'description'=>fake()->sentence(),
             'NumOfChildren'=>fake()->randomElement([30]),
             'age_range'=>fake()->randomElement([5]),
-            'teacher_id'=> Teacher::factory(),
+            'teacher_id'=>fake()->numberBetween(1,6) ,
             'price'=>fake()->numberBetween(70,90),
             'start_time'=>fake()->time('H'),
             'end_time'=>fake()->time('H'),

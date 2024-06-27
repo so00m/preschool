@@ -37,4 +37,21 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
         $this->middleware('auth')->only('logout');
     }
+
+//     public function credentials(Request $request){
+// if(is_numeric($request->email)){
+//                 return ['mobile'=>$request->email, 'password'=>$request->password];
+        
+//         }elseif($request->username){
+//                 return ['username'=>$request->email, 'password'=>$request->password];
+                
+//         }elseif(filter_var($request->email, FILTER_VALIDATE_EMAIL)){
+//                 return ['email'=>$request->email,'password'=>$request->password];
+//         }
+        
+
+
+
 }
+
+

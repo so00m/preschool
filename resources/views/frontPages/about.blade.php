@@ -1,24 +1,24 @@
-@extends('layout.main')
+@extends('frontPages.layout.main')
 @section('title','About Us')
 @section('content')
 
         <!-- Page Header End -->
-        @include('includes.header')
+        @include('frontPages.includes.header')
         <!-- Page Header End -->
 
 
         <!-- About Start -->
-         @include('includes.about')
+         @include('frontPages.includes.about')
         <!-- About End -->
 
 
         <!-- Call To Action Start -->
-         @include('includes.callToAction')
+         @include('frontPages.includes.callToAction')
         <!-- Call To Action End -->
 
 
         <!-- Team Start -->
-        @include('includes.team')
+        @include('frontPages.includes.team')
         <!-- Team End -->
 
 @endsection

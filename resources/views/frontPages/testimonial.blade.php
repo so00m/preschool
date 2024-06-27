@@ -1,12 +1,12 @@
-@extends('layout.main')
+@extends('frontPages.layout.main')
 @section('title','Testimonial')
 
 @section('content')
         <!-- Page Header End -->
-        @include('includes.header')
+        @include('frontPages.includes.header')
         <!-- Page Header End -->
          
         <!-- Testimonial Start -->
-        @include('includes.testimonial')
+        @include('frontPages.includes.testimonial')
         <!-- Testimonial End -->
 @endsection

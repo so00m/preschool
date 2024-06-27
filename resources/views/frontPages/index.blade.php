@@ -1,37 +1,37 @@
-@extends('layout.main')
+@extends('frontPages.layout.main')
 @section('title','Preschool Home Page')
 @section('content')
 
     <!-- carousel Start -->
-        @include('includes.carousel')
+        @include('frontPages.includes.carousel')
     <!-- carousel End -->
 
     <!-- Facilities Start -->
-        @include('includes.facility')
+        @include('frontPages.includes.facility')
     <!-- Facilities End -->
         
     <!-- About Start -->
-        @include('includes.about')
+        @include('frontPages.includes.about')
     <!-- About End -->
 
     <!-- Call To Action Start -->
-         @include('includes.callToAction')
+         @include('frontPages.includes.callToAction')
     <!-- Call To Action End -->
 
     <!-- Classes Start -->
-         @include('includes.classes')
+         @include('frontPages.includes.classes')
     <!-- Classes End -->
 
     <!-- Appointment Start -->
-         @include('includes.appointment')
+         @include('frontPages.includes.appointment')
     <!-- Appointment End -->
 
     <!-- Team Start -->
-        @include('includes.team')
+        @include('frontPages.includes.team')
     <!-- Team End -->
     
     <!-- Testimonial Start -->
-        @include('includes.testimonial')
+        @include('frontPages.includes.testimonial')
     <!-- Testimonial End -->
 
 @endsection

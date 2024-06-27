@@ -1,16 +1,16 @@
-@extends('layout.main')
+@extends('frontPages.layout.main')
 @section('title','404 Error')
 @section('content')
 
         <!-- Page Header End -->
-        @include('includes.header')
+        @include('frontPages.includes.header')
         <!-- Page Header End -->
          
        
 
 
         <!-- 404 Start -->
-        @include('includes.error404')
+        @include('frontPages.includes.error404')
         <!-- 404 End -->
 
 

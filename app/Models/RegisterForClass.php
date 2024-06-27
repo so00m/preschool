@@ -4,12 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Child;
-use App\Models\Classes;
 
-class Enrollment extends Model
+class RegisterForClass extends Model
 {
-    protected $table = 'enrollments';
+    use HasFactory;
+    protected $table = 'registerforclass';
 
     protected $fillable = ['registerDate','status','child_id','class_id'];
 
