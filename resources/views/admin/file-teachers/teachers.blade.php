@@ -43,6 +43,7 @@
                                         @csrf
                                         @method('DELETE')
                                     <input type="hidden" value="{{$teacher->id}}" name="id" >
+                                    
                                     <input type="submit" onclick="return confirm('Are you sure?')" value="Delete">
 
                                     </form> 

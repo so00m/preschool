@@ -27,8 +27,15 @@ Route::get('contact', [PreschoolController::class, 'contact'])->name('contact');
 Route::get('facility', [PreschoolController::class, 'facility'])->name('facility');
 Route::get('testimonial', [PreschoolController::class, 'testimonial'])->name('testimonial');
 
-//---------------dashboard routes-----------------------------------------------------------
 
+Auth::routes(['verify'=>true]);
+// Home route after successful login and verification
+Route::get('/dashBoard', [App\Http\Controllers\HomeController::class, 'index'])->middleware('verified')->name('dashBoard');  
+Route::get('/logout', function () { Auth::logout(); return redirect('login'); })->name('logout');
+
+
+
+//---------------dashboard routes-----------------------------------------------------------
 Route::prefix('admin')->middleware('verified')->group(function () {
 
     //Route::get('dashBoard',[DashboardController::class, 'dashBoard'])->name('dashBoard');
@@ -46,12 +53,9 @@ Route::prefix('admin')->middleware('verified')->group(function () {
     Route::get('color',[DashboardController::class, 'color'])->name('color');
     Route::get('other',[DashboardController::class, 'other'])->name('other');
 
-    });
+  
+  });
 
-Auth::routes(['verify'=>true]);
-// Home route after successful login and verification
-Route::get('/dashBoard', [App\Http\Controllers\HomeController::class, 'index'])->middleware('verified')->name('dashBoard');  
-Route::get('/logout', function () { Auth::logout(); return redirect('login'); })->name('logout');
 //---------------teacher routes-----------------------------------------------------------
 
 Route::get('teachers',[TeacherController::class, 'index'])->name('teachers');

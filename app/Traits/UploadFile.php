@@ -4,11 +4,11 @@ namespace App\Traits;
 
 trait UploadFile
 {
-    public function upload($imgeFile , $path){
-    $imgExt=$imgeFile->getClientOriginalExtension();
+    public function upload($imageFile , $path){
+    $imgExt=$imageFile->getClientOriginalExtension();
     $filename=time() . '-' . $imgExt;        
     $path='assets/images';
-    $imgeFile->move($path,$filename);
+    $imageFile->move($path,$filename);
     return $filename;
     }
 }

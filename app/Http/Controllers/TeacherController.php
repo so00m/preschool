@@ -46,7 +46,7 @@ class TeacherController extends Controller
         $data['image']=$filename;
 
         $data['published']=isset($request->published);
-        var_dump($data['published']);
+        
         Teacher::create($data);
         return redirect('teachers')->with('success', 'Teacher added successfully!');
     }
