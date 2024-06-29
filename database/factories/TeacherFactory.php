@@ -23,9 +23,8 @@ class TeacherFactory extends Factory
             'last_name'=>fake()->lastname(),
             'phone' =>fake()->phoneNumber(),
             'email' =>fake()->unique()->safeEmail(),
-            'subject' =>fake()->word(),
-            'image' =>fake()->randomElement([1719085620,1719085620,1719085620]),
-            'published'=>fake()->numberBetween(0,1),
+            'image' =>fake()->randomElement([1719085620,1719085620,1719085620]).'-jpg',
+            'published'=>fake()->boolean(),
         ];
     }
 }

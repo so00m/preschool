@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('last_name');
             $table->date('birth_date');
             $table->string('grade');
-            $table->foreignId('parent_id')->constrained('parents')->onDelete('restrict');
+            $table->foreignId('parent_id')->constrained('parents');
             $table->softDeletes();
             $table->timestamps();
         });

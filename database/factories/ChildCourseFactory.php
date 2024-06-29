@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\RegisterForClass>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\ChildCourse>
  */
-class RegisterForClassFactory extends Factory
+class ChildCourseFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -20,7 +20,7 @@ class RegisterForClassFactory extends Factory
             'registerDate'=>fake()->date(),
             'status'=>fake()->randomElement(['pending','approved','active','rejected','cancelled']),
             'child_id'=>fake()->numberBetween(1,30),
-            'class_id'=>fake()->numberBetween(1,30),
+            'course_id'=>fake()->numberBetween(1,6),
         ];
     }
 }

@@ -1,29 +1,33 @@
 <?php
-
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use App\Models\Classes;
 use App\Models\Parents;
-use App\Models\Enrollment;
+use App\Models\ChildCourse;
+use App\Models\Course;
 
 class Child extends Model
+
 {
-    protected $table = 'children';
-
     use HasFactory, SoftDeletes;
-    protected $fillable = ['first_name', 'last_name','birth_date', 'grade' ,'parent_id'];
 
-    public function classes()
+    protected $table = 'children';
+    protected $fillable = ['first_name', 'last_name', 'birth_date', 'grade', 'parent_id'];
+
+    public function courses()
     {
-        return $this->belongsToMany(classes::class);
+        return $this->belongsToMany(Course::class);
     }
 
-    public function enrollments()
+    public function childCourses()
     {
-        return $this->hasMany(Enrollment::class); 
+        return $this->hasMany(ChildCourse::class);
     }
 
+    public function parent()
+    {
+        return $this->belongsTo(Parents::class, 'parent_id');
+    }
 }

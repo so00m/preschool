@@ -23,7 +23,7 @@ class ChildFactory extends Factory
             'last_name'=>fake()->lastname(),
             'birth_date'=>fake()->date(),
             'grade'=>fake()->numberBetween(1,2),
-            'parent_id' =>fake()->numberBetween(1,20),
+            'parent_id' =>fake()->numberBetween(1,30),
         ];
     }
 }

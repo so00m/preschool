@@ -5,11 +5,11 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use App\Models\Parents;
-use App\Models\RegisterForClass;
+use App\Models\ChildCourse;
 use App\Models\User;
 use App\Models\Child;
 use App\Models\Teacher; 
-use App\Models\Classes;
+use App\Models\Course;
 
 
 
@@ -31,13 +31,13 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@example.com',
         ]);
         */
-        User::factory(20)->create();
-        Teacher::factory(30)->create();
+        User::factory(10)->create();
+        Teacher::factory(6)->create();
         Parents::factory(30)->create();
         Child::factory(30)->create();
-        Classes::factory(30)->create();
-        RegisterForClass::factory(30)->create();
+        Course::factory(6)->create();
         
+        ChildCourse::factory(30)->create();
         
 
         // // Attach children to teachers (many-to-many relationship)

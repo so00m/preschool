@@ -12,7 +12,14 @@ class parents extends Model
     protected $table = 'parents';
 
     use HasFactory, SoftDeletes;
-    protected $fillable = ['first_name', 'last_name', 'phone', 'address', 'email','job'];
+    protected $fillable = [
+        'first_name',
+        'last_name',
+        'phone',
+        'address',
+        'email',
+        'job'
+    ];
 
     public function children()
     {

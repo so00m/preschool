@@ -6,22 +6,26 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Models\Child;
-use App\Models\Enrollment;
 use App\Models\Teacher;
+use App\Models\ChildCourse;
 
-class Classes extends Model
+class Course extends Model
 {
-    protected $table = 'classes';
-
     use HasFactory, SoftDeletes;
+
+    protected $table = 'courses';
+
     protected $fillable = [
         'name',
         'NumOfChildren',
         'age_range',
         'description',
-        'teacher_id','price',
-        'start_time','end_time',
-        'start_date','end_date',
+        'teacher_id',
+        'price',
+        'start_time',
+        'end_time',
+        'start_date',
+        'end_date',
     ];
     
     public function teacher()
@@ -31,12 +35,11 @@ class Classes extends Model
 
     public function children()
     {
-        return $this->belongsToMany(Child::class);
+        return $this->belongsToMany(Child::class, 'child_courses', 'course_id', 'child_id');
     }
     
-    // public function registerations()
-    // {
-    //     return $this->hasMany(RegisterForClass::class,'class_id'); 
-    // }
-
+    public function childCourses()
+    {
+        return $this->hasMany(ChildCourse::class, 'course_id');
+    }
 }
